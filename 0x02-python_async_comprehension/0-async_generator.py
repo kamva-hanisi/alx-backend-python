@@ -2,7 +2,7 @@
 """Task: A coroutine called async_generator that takes no
                  arguments.
                  The coroutine will loop 10 times, each time asynchronously
-                 wait 1 second, then yield a random number between 0 and 10
+                 wait 1 second, then yield a random number between 0 and 10.Use the random module.
 """
 
 import asyncio
@@ -18,7 +18,3 @@ async def async_generator() -> Generator[float, None, None]:
 async def main():
     async for value in async_generator():
         print(value)
-
-if __name__ == "__main__":
-    asyncio.run(main())
-
